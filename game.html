@@ -1,0 +1,104 @@
+
+
+<!doctype HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Top Down Shooter</title>
+		<link href="css/main.css" type="text/css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		
+	</head>
+
+	<body onLoad="init()" onresize="resizeWindow()">
+		<canvas id="viewPort" width="1600" height="900" draggable="false"></canvas>
+
+		<div id="fps" draggable="false">FPS: 60</div>
+		<a href='./' id='exit'>Exit To Menu</a>
+		<button onclick='helpMenu()' id='help'>Help</button>
+
+		<div id='helpWrapper' class='help'>
+			<div id='helpInfo' class='help' >
+			Use <b>WASD</b> to move the blue tank. Move <b>MOUSE</b> to aim and press <b>SPACE</b> to shoot. Once available, click on upgrade buttons to upgrade tank, or use the corresponding number key: <b>1-8</b>
+			</div>
+			<button id='closeHelp' class='help' onclick='helpMenu()'>Close</button>
+		</div>
+
+
+		<progress id="playerHealth" draggable="false" value="100" max="100"></progress>
+		<progress id="playerScore" draggable="false" value="0" max="100"></progress>
+		<div id="levelLbl">Level 1</div>
+		<div id="upgrades">
+			<div class="upgradeBtn" id="Health">
+				<img class="upgradeImg" id="healthImg" onclick="player.upgrade(0)"/>
+				<img class="barImg" id="HealthBar">
+			</div>
+			<div class="upgradeBtn" id="Regen">
+				<img class="upgradeImg" id="regenImg" onclick="player.upgrade(1)"/>
+				<img class="barImg" id="RegenBar"/>
+			</div>
+			<div class="upgradeBtn" id="Speed">
+				<img class="upgradeImg" id="speedImg" onclick="player.upgrade(2)"/>
+				<img class="barImg" id="SpeedBar"/>
+			</div>
+			<div class="upgradeBtn" id="BulletLife">
+				<img class="upgradeImg" id="bulletlifeImg" onclick="player.upgrade(3)"/>
+				<img class="barImg" id="BulletLifeBar"/>
+				<div id="upgradeText">X 0</div>
+			</div>
+			<div class="upgradeBtn" id="BulletDmg">
+				<img class="upgradeImg" id="bulletdmgImg" onclick="player.upgrade(4)"/>
+				<img class="barImg" id="BulletDmgBar"/>
+			</div>
+			
+			<div class="upgradeBtn" id="Reload">
+				<img class="upgradeImg" id="reloadImg" onclick="player.upgrade(5)"/>
+				<img class="barImg" id="ReloadBar"/>
+			</div>
+			<div class="upgradeBtn" id="BulletSpd">
+				<img class="upgradeImg" id="bulletspeedImg" onclick="player.upgrade(6)"/>
+				<img class="barImg" id="BulletSpdBar"/>
+			</div>
+
+		</div>
+		<table id="leaderboard" draggable="false">
+		  <tr><th></th><th class="player">Player</th><th class="level">Level</th><th class="score">Score</th></tr>
+		  <tr><td id="gold"> 1 </td><td></td><td></td><td></td></tr>
+		  <tr><td id="silver"> 2 </td><td></td><td></td><td></td></tr>
+		  <tr><td id="bronze"> 3 </td><td></td><td></td><td></td></tr>
+		  <tr><td> 4 </td><td></td><td></td><td></td></tr>
+		  <tr><td> 5 </td><td></td><td></td><td></td></tr>
+		  <tr><td> 6 </td><td></td><td></td><td></td></tr>
+		  <tr><td> 7 </td><td></td><td></td><td></td></tr>
+		  <tr><td> 8 </td><td></td><td></td><td></td></tr>
+		  <tr><td> 9 </td><td></td><td></td><td></td></tr>
+		  <tr><td> 10 </td><td></td><td></td><td></td></tr>
+		</table>
+		<script src="js/names.js"></script>
+		<script src="js/objects.js"></script>
+		<script src="js/player.js"></script>
+		<script src="js/bullets.js"></script>
+		<script src="js/enemies.js"></script>
+		<script src="js/shapes.js"></script>
+		<script src="js/styles.js"></script>
+		<script src="js/globals.js"></script>
+		<script src="js/listeners.js"></script>
+		<script src="js/timers.js"></script>
+		<script src="js/main.js"></script>
+
+		
+
+		
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

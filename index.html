@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+		<link rel="stylesheet" href="main.css">
+		<script src="main.js"></script>
+	</head>
+	<body onload="init()">
+		<div id="desc">
+			<h2>Set Up Game</h2>
+			<p1>Fill out below to set up game specifics or press 'Play With Defaults' to jump in quickly</p1>
+		</div>
+		<a href='https://www.strykergames.ca' class='home'><div style='height:2vh'></div>HOME</a>
+		<div id="main" class="mainWrapper">
+			<div id="enemyCnt" class="optionDiv">Number of Enemies:
+				<div class='btnWrapper'>
+					<input type="button" id="lowEnemies" class="choiceBtn" value="LOW" onclick="selection(0)" ></input>
+					<input type="button" id="medEnemies" class="choiceBtn" value="MEDIUM" onclick="selection(1)" ></input>
+					<input type="button" id="highEnemies" class="choiceBtn" value="HIGH" onclick="selection(2)" ></input>
+				</div>
+			</div>
+			<div id="shapeCnt" class="optionDiv">Number of Shapes:
+				<div class='btnWrapper'>
+					<input type="button" id="lowShapes" class="choiceBtn" value="LOW" onclick="selection(3)" ></input>
+					<input type="button" id="medShapes" class="choiceBtn" value="MEDIUM" onclick="selection(4)" ></input>
+					<input type="button" id="highShapes" class="choiceBtn" value="HIGH" onclick="selection(5)" ></input>
+				</div>
+			</div>
+			<div id="mapSize" class="optionDiv">Map Size:
+				<div class='btnWrapper'>
+					<input type="button" id="smallMap" class="choiceBtn" value="SMALL" onclick="selection(6)" ></input>
+					<input type="button" id="medMap" class="choiceBtn" value="NORMAL" onclick="selection(7)" ></input>
+					<input type="button" id="largeMap" class="choiceBtn" value="LARGE" onclick="selection(8)" ></input>
+				</div>
+			</div>
+			<div id="enemyDiff" class="optionDiv">Enemy Difficulty:
+				<div class='btnWrapper'>
+					<input type="button" id="easyEnemy" class="choiceBtn" value="EASY" onclick="selection(9)" ></input>
+					<input type="button" id="normEnemy" class="choiceBtn" value="NORMAL" onclick="selection(10)" ></input>
+					<input type="button" id="hardEnemy" class="choiceBtn" value="HARD" onclick="selection(11)" ></input>
+				</div>
+			</div>
+			<div id="confirm" class="optionDiv">
+				<div class='btnWrapper confirmWrapper'>
+					<input type="button" id="confirm" class="choiceBtn" value="CONFIRM SETTINGS" onclick="selection(12)" ></input>
+					<input type="button" id="default" class="choiceBtn" value="PLAY WITH DEFAULTS" onclick="selection(13)" ></input>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>
